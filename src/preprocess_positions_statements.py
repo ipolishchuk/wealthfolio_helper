@@ -37,7 +37,6 @@ PROVIDER_CONFIG: dict[str, dict[str, Any]] = {
             r"^(?P<acct_name>[a-zA-Z0-9_.$! -]+)-Positions-"
             r"(?P<date>\d{4}-\d{2}-\d{2})-(?P<time>\d{6})\.csv$"
         ),
-        "supported_acct_types": ["Individual", "Join"],
         "header_pattern": (
             r"^Positions for account (?P<acct_name>.+?)\s+\.\.\.(?P<last3>\d{3})"
             r"\s+as of\s+(?P<time>\d{1,2}:\d{2}\s*(?:AM|PM))\s+ET,\s*"

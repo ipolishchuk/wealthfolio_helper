@@ -100,11 +100,7 @@ Current Schwab filename patternAAAAA-Positions-YYYY-MM-DD-HHMMSS.csv Where:
 - AAAAA: Account name.
 - YYYY-MM-DD: Statement date.
 - HHMMSS: Six-digit statement timestamp.
-Currently supported account types:
-- Individual
-- Join
-Important: Join is the actual Schwab account type. Do not replace it with Joint. Validate the
-filename pattern and the calendar validity of its date. Only matching files are candidates for
+Important: Validate the filename pattern and the calendar validity of its date. Only matching files are candidates for
 processing. Sort matching input files by filename before processing.
 Output filename For each input file, generate the output filename
 using:INPUT_FILENAME_WITHOUT_EXTENSION_ACCOUNT_TYPE_LAST3_preprocessed.c
@@ -157,7 +153,6 @@ column definitions, and transformation rules.
 
 Define the following values in the Schwab section of PROVIDER_CONFIG:
 - Input filename pattern and regular expression.
-- Supported account types: Individual, Join.
 - Statement header pattern and regular expression.
 - Source CSV column names.
 - Excluded security symbols.
@@ -433,7 +428,6 @@ Before delivering the script:
 - Verify Python syntax and imports.
 - Test successful processing of a representative Schwab statement.
 - Test the unquoted comma in the first statement line.
-- Test both supported account types.
 - Test filename/header date and account-type mismatches.
 - Test missing and duplicate columns.
 - Test excluded symbols with the initially empty list and with explicitly configured symbols.

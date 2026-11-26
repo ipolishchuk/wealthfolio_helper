@@ -1,2 +1,6 @@
 Schwab
 *.csv
+*.swp
+.DS_Store
+*.bak
+*.orig
